@@ -18,6 +18,7 @@
 
       <%# render a custom partial based on the option type name? %>
 
+      <div>********************************</div>
       <% partial_name = "spree/products/ad_hoc_options/#{ot.name.gsub(/(-)|(\s)/,"_").downcase}" %>
       <% if lookup.exists?(partial_name,nil,true) %>
         <%= render :partial => partial_name, :locals => {:option_type=>ahot, :class_str=>class_str} %>
